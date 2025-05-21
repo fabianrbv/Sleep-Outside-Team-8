@@ -261,3 +261,11 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.empty-cart-message {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  color: #666;
+  list-style: none;
+}
