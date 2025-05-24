@@ -22,7 +22,11 @@ export default class ProductDetails {
 
   addProductToCart() {
     const cartItems = getLocalStorage("so-cart") || [];
-    cartItems.push(this.product);
+    const productToAdd = {
+    ...this.product,
+    id: `${this.product.Name}-${Date.now()}`
+  };
+    cartItems.push(productToAdd);
     setLocalStorage("so-cart", cartItems);
   }
 
