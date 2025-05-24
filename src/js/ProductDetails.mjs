@@ -48,4 +48,18 @@ function productDetailsTemplate(product) {
   document.getElementById("productDesc").innerHTML = product.DescriptionHtmlSimple;
 
   document.getElementById("addToCart").dataset.id = product.Id;
+
+    // discount 
+  const original = product.SuggestedRetailPrice;
+  const current = product.FinalPrice;
+
+  if (original > current) {
+    const discountPercent = Math.round(((original - current) / original) * 100);
+    const discountBadge = document.createElement("span");
+    discountBadge.textContent = `${discountPercent}% OFF`;
+
+    // Insertar el badge justo después del precio
+    const priceElement = document.getElementById("productPrice");
+    priceElement.insertAdjacentElement("afterend", discountBadge);
+     }
 }
