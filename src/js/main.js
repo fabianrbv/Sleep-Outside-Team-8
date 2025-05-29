@@ -6,3 +6,7 @@ const element = document.querySelector(".product-list");
 const productList = new ProductList("Tents", dataSource, element);
 
 productList.init();
+
+import { loadHeaderFooter } from "./utils.mjs";
+
+loadHeaderFooter();
