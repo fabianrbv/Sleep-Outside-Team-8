@@ -156,6 +156,10 @@ button {
   padding: 1rem;
 }
 
+.product-grid{
+  width: 10%;
+}
+
 .product-list {
   display: flex;
   flex-flow: row wrap;
