@@ -156,9 +156,49 @@ button {
   padding: 1rem;
 }
 
-.product-grid{
-  width: 10%;
+/* CSS agregado para corregir las imagenes del html principal */
+
+.logo--square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto; /* centrado horizontal y separación vertical */
+  text-align: center;
 }
+
+.product-grid{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem; 
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.product-grid li{
+  list-style: none;
+  text-align: center;
+  width: 100px; 
+}
+
+.product-grid img{
+  width: 64px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.product-grid a{
+ display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: blue; 
+}
+/* 
+Hasta aca */
 
 .product-list {
   display: flex;
