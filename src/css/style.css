@@ -166,11 +166,11 @@ button {
   text-align: center;
 }
 
-.product-grid{
+.product-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5rem; 
+  gap: 5rem;
   padding: 0;
   margin: 0 auto;
   max-width: 100%;
@@ -178,24 +178,24 @@ button {
   overflow-x: hidden;
 }
 
-.product-grid li{
+.product-grid li {
   list-style: none;
   text-align: center;
-  width: 100px; 
+  width: 100px;
 }
 
-.product-grid img{
+.product-grid img {
   width: 64px;
   height: auto;
   display: block;
   margin: 0 auto 0.5rem;
 }
 
-.product-grid a{
- display: block;
+.product-grid a {
+  display: block;
   text-decoration: none;
   font-weight: bold;
-  color: blue; 
+  color: blue;
 }
 /* 
 Hasta aca */
@@ -304,4 +304,23 @@ Hasta aca */
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+.cart-card {
+  position: relative;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 0cm;
+  right: 1cm;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #c00;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: #900;
 }
