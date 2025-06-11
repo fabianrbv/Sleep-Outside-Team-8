@@ -26,7 +26,11 @@ function removeItemFromCart(productId) {
   const index = cart.findIndex((item) => item.Id === productId);
 
   if (index !== -1) {
-    cart.splice(index, 1);
+    if (cart[index].qty && cart[index].qty > 1) {
+      cart[index].qty -= 1;
+    } else {
+      cart.splice(index, 1);
+    }
   }
 
   setLocalStorage("so-cart", cart);
@@ -42,7 +46,7 @@ function cartItemTemplate(item) {
       <h2 class="card__name">${item.Name}</h2>
     </a>
     <p class="cart-card__color">${item.Colors[0].ColorName}</p>
-    <p class="cart-card__quantity">qty: 1</p>
+    <p class="cart-card__quantity">qty: ${item.qty || 1}</p>
     <p class="cart-card__price">$${item.FinalPrice}</p>
     <button class="remove-btn" data-id="${item.Id}" aria-label="Eliminar producto">X</button>
   </li>`;
