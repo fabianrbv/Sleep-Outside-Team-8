@@ -38,11 +38,28 @@ export function renderWithTemplate(template, parentElement, data, callback) {
   }
 }
 
+// async function loadTemplate(path) {
+//   const res = await fetch(path);
+//   const template = await res.text();
+//   return template;
+// }
+
 async function loadTemplate(path) {
-  const res = await fetch(path);
-  const template = await res.text();
-  return template;
+  try {
+    const res = await fetch(path);
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status} | path: ${path}`);
+    }
+
+    const template = await res.text();
+    return template;
+  } catch (error) {
+    console.error("Error loading template:", error);
+    return `<div style="color:red;">Error loading: ${path}</div>`;
+  }
 }
+
 
 // get the product id from the query string
 export function getParam(param) {
