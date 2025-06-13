@@ -1,4 +1,4 @@
-console.log("✅ product-listing.js ha sido cargado correctamente");
+console.log("🚀 VITE_SERVER_URL:", import.meta.env.VITE_SERVER_URL);
 
 import { loadHeaderFooter, getParam } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
